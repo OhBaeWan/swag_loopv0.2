@@ -46,7 +46,7 @@ void aaq(String x, int y, int z, String a){
       lcd.clear();
       printText(x);
       level = ++level;
-      delay(1000);4
+      delay(1000);
   }
   if (digitalRead(7)==HIGH && level == y && z == 2 && lastQuestion == a){
       lastQuestion = x;
@@ -97,5 +97,9 @@ void loop(){
    aaq("do you even lift?", 2, 2, "are you spiffy?");
    aaq("are you high?", 2, 1, "are you drunk?");
    aaq("are you over 21?", 2, 2, "are you drunk?");
+ // level 3
+   aaq("Result: you are a dirtbag", 3, 1, "are you high?");
+   aaq("Result: you are a MTI", 3, 1, "are you over 21?");
+   aaq("Result: you are a swag feg", 3, 2, "are you over 21?");
+   aaq("Result: you are a nice guy", 3, 2, "are you high?");
 }
-
