@@ -109,21 +109,21 @@ void loop(){
    aaq("did you make your bed?", 3, 2, "are you over 21?");
    
     //level 4
-   aaq("Result: you are the homeless type", 3, 1, "do u open the door for da ladies?");
-   aaq("Result: you are the ghetto type", 3, 2, "do u open the door for da ladies?");
-   aaq("Result: you are the wasted type", 3, 1, "do your chain hang low?");
-   aaq("Result: you are the cool guy type", 3, 2, "do your chain hang low?");
-   aaq("Result: you are the dirtbag type", 3, 1, "do u even kno what's going on?");
-   aaq("Result: you are the MTI type", 3, 1, "do u even kno what's going on?");
-   aaq("Result: you are the swag feg type", 3, 2, "what the crimp trainee?");
-   aaq("Result: you are the nice guy type", 3, 2, "what the crimp trainee?");
-   aaq("Result: you are the cool type", 3, 1, "do u open the door for da ladies?");
-   aaq("Result: you are the hermit type", 3, 1, "do u open the door for da ladies?");
-   aaq("Result: you are the yolo type", 3, 1, "do u open the door for da ladies?");
-   aaq("Result: you are the that guy type", 3, 1, "do u open the door for da ladies?");
-   aaq("Result: you are the clueless type", 3, 1, "do u open the door for da ladies?");
-   aaq("Result: you are the wtf type", 3, 1, "do u open the door for da ladies?");
-   aaq("Result: you are the ninja type", 3, 1, "do u open the door for da ladies?");
-   aaq("Result: you are the jock type", 3, 1, "do u open the door for da ladies?");
+   aaq("Result: you are the homeless type", 4, 1, "do u open the door for da ladies?");
+   aaq("Result: you are the ghetto type", 4, 2, "do u open the door for da ladies?");
+   aaq("Result: you are the wasted type", 4, 1, "do your chain hang low?");
+   aaq("Result: you are the cool guy type", 4, 2, "do your chain hang low?");
+   aaq("Result: you are the dirtbag type", 4, 1, "do u even kno what's going on?");
+   aaq("Result: you are the MTI type", 4, 2, "do u even kno what's going on?");
+   aaq("Result: you are the swag feg type", 4, 1, "what the crimp trainee?");
+   aaq("Result: you are the nice guy type", 4, 2, "what the crimp trainee?");
+   aaq("Result: you are the cool type", 4, 1, "did you shave with a banana?");
+   aaq("Result: you are the hermit type", 4, 2, "did you shave with a banana?");
+   aaq("Result: you are the yolo type", 4, 1, "are your pants on the ground?");
+   aaq("Result: you are the that guy type", 4, 1, "are your pants on the ground?");
+   aaq("Result: you are the clueless type", 4, 1, "are you a DBA?");
+   aaq("Result: you are the wtf type", 4, 1, "are you a DBA?");
+   aaq("Result: you are the ninja type", 4, 1, "did you make your bed?");
+   aaq("Result: you are the jock type", 4, 1, "did you make your bed?");
  
 }
