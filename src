@@ -3,8 +3,10 @@
 
 LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
 
-//declare level
+//declare global variables 
 int level = 0;
+String lastQuestion;
+
 
 //declare delay function
 void delaySequence(){
@@ -13,11 +15,12 @@ void delaySequence(){
   delay(1000);
 }
 
-//function to print up to 32 characters on both rows rintText("text you want to print")
+
+
+//function to print up to 32 characters on both rows printText("text you want to print")
 void printText(String x){
     int i;
     char a[33];
-    //x.toCharArray(a[33], 33); // puts text into an array
     lcd.clear(); // gets the lcd ready to be printed to
     for (i = 0; i < x.length(); i = i + 1){
       a[i] = x.charAt(i);
@@ -35,23 +38,23 @@ void printText(String x){
 
 // Function to print a question folowing a answer aaq("question to be asked", level, yes or no, "question that proceeds")
 
-String lastQuestion;
+
 
 void aaq(String x, int y, int z, String a){
-if (digitalRead(6)==HIGH && level == y && z == 1 && lastQuestion == a){
+  if (digitalRead(6)==HIGH && level == y && z == 1 && lastQuestion == a){
       lastQuestion = x;
       lcd.clear();
       printText(x);
       level = ++level;
       delay(1000);4
-}
-if (digitalRead(7)==HIGH && level == y && z == 2 && lastQuestion == a){
+  }
+  if (digitalRead(7)==HIGH && level == y && z == 2 && lastQuestion == a){
       lastQuestion = x;
       lcd.clear();
       printText(x);
       level = ++level;
       delay(1000);
-} 
+  } 
 }
 void setup(){
   //declare pins
