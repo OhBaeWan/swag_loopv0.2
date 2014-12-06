@@ -101,7 +101,7 @@ void loop(){
    aaq("Result: you are the homeless type", 3, 1, "do you suck?");
    aaq("Result: you are the ghetto type", 3, 2, "do you suck?");
    aaq("Result: you are the wasted type", 3, 1, "do you even lift?");
-   aaq("Result: you are the cool guy type", 3, 2, "are you over 21?");
+   aaq("Result: you are the cool guy type", 3, 2, "do you even lift?");
    aaq("Result: you are the dirtbag type", 3, 1, "are you high?");
    aaq("Result: you are the MTI type", 3, 1, "are you over 21?");
    aaq("Result: you are the swag feg type", 3, 2, "are you over 21?");
