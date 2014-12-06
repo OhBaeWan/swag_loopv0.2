@@ -1,0 +1,98 @@
+//include library code
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+
+//declare level
+int level = 0;
+
+//declare delay function
+void delaySequence(){
+  delay(3000);
+  lcd.clear();
+  delay(1000);
+}
+
+//function to print up to 32 characters on both rows rintText("text you want to print")
+void printText(String x){
+    int i;
+    char a[33];
+    //x.toCharArray(a[33], 33); // puts text into an array
+    lcd.clear(); // gets the lcd ready to be printed to
+    for (i = 0; i < x.length(); i = i + 1){
+      a[i] = x.charAt(i);
+      if(i < 16){
+        lcd.setCursor(i, 0);
+        lcd.print(a[i]);
+      }
+      else{
+        lcd.setCursor(i - 16, 1);
+        lcd.print(a[i]);
+      }
+    }
+  }
+
+
+// Function to print a question folowing a answer aaq("question to be asked", level, yes or no, "question that proceeds")
+
+String lastQuestion;
+
+void aaq(String x, int y, int z, String a){
+if (digitalRead(6)==HIGH && level == y && z == 1 && lastQuestion == a){
+      lastQuestion = x;
+      lcd.clear();
+      printText(x);
+      level = ++level;
+      delay(1000);4
+}
+if (digitalRead(7)==HIGH && level == y && z == 2 && lastQuestion == a){
+      lastQuestion = x;
+      lcd.clear();
+      printText(x);
+      level = ++level;
+      delay(1000);
+} 
+}
+void setup(){
+  //declare pins
+  pinMode(6, INPUT);
+  pinMode(7, INPUT);
+
+  //set up # of columns and rows
+  lcd.begin(16, 2);
+  //print that message bro
+  printText("yo waz gud homie");
+  
+  //delay sequence
+  delaySequence();
+  
+  //print that next message brobro
+  printText("i'm afro da gr8");
+  
+  //delay sequence
+  delaySequence();
+  
+  //let em know what's up 
+  printText("press 6 for YES and 7 for NO");
+  //delay sequence
+  delaySequence();
+}
+
+void loop(){
+  //BEGIN 21 QUESTIONS
+  if (level == 0){
+    printText("are you cool?");
+    level = 1;
+    lastQuestion = "are you cool?";
+  }
+  //level 1
+   aaq("are you spiffy?", 1, 1, "are you cool?");
+   aaq("are you drunk?", 1, 2, "are you cool?");
+
+  //level 2
+   aaq("do you suck?", 2, 1, "are you spiffy?");
+   aaq("do you even lift?", 2, 2, "are you spiffy?");
+   aaq("are you high?", 2, 1, "are you drunk?");
+   aaq("are you over 21?", 2, 2, "are you drunk?");
+}
+
